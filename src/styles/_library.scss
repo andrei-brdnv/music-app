@@ -6,10 +6,18 @@
   height: 100%;
   box-shadow: 2px 2px 25px rgb(200, 200, 200);
   overflow: scroll;
+  transform: translateX(-100%);
+  transition: all .5s ease;
+  opacity: 0;
 
   h2 {
     padding: 2rem;
   }
+}
+
+.active {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 * {
