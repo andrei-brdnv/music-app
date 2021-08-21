@@ -11,7 +11,20 @@
   opacity: 0;
 
   h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 2rem;
+
+    svg {
+      display: none;
+      cursor: pointer;
+      opacity: 0.75;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 }
 
@@ -35,4 +48,18 @@
 
 *::-webkit-scrollbar-thumb {
   background-color: rgba(155, 155, 155, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    z-index: 10;
+    width: 100%;
+    background: white;
+
+    h2 {
+      svg {
+        display: block;
+      }
+    }
+  }
 }

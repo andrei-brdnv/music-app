@@ -13,7 +13,7 @@ const App = () => {
     const [isOpenLibrary, setIsOpenLibrary] = useState(false)
 
     return (
-        <div className="App">
+        <div className={`App ${isOpenLibrary ? "library-active" : ""}`}>
             <Nav
                 isOpenLibrary={isOpenLibrary}
                 setIsOpenLibrary={setIsOpenLibrary}
@@ -27,12 +27,14 @@ const App = () => {
                 setCurrentSong={setCurrentSong}
                 isPlaying={isPlaying}
                 setIsPlaying={setIsPlaying}
+                isOpenLibrary={isOpenLibrary}
             />
             <Library
                 songs={songs}
                 currentSong={currentSong}
                 setCurrentSong={setCurrentSong}
                 isOpenLibrary={isOpenLibrary}
+                setIsOpenLibrary={setIsOpenLibrary}
             />
         </div>
     );

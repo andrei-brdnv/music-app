@@ -17,6 +17,20 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+.App {
+  transition: all .5s ease;
+}
+
+.library-active {
+  margin-left: 20rem;
+}
+
+@media screen and (max-width: 768px) {
+  .library-active {
+    margin: 0;
+  }
+}
+
 @import "song";
 @import "player";
 @import "library";
